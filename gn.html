@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="gn.css">
+    <title>Gissa nummret</title>
+  </head>
+  <!-- sätter en avtryckar function, som kommer bestämma det random nummret-->
+  <body onload="init()">
+
+    <div id="container">
+      <div class="panel">
+        <h2>Jag har ett random nummer <br> mellan 1-100</h2>
+        <h3 id="textOutput">Försök och litsa ut vilket!</h3><!--får en fin linje av hr taggen --><hr>
+        <p>Välj svårighetsgrad</p>
+        <button id="easyBtn" onclick="easyMode()" class="">Lätt: Gissa med 10 försök</button>
+        <button id="hardBtn" onclick="hardMode()" class="">Svår: Gissa med 5 försök</button>
+
+        <!-- varje gång man klickar på knappen ska en function gå
+      använder id för att använda den js för att gömma den tills spelet är slut-->
+        <button id="newGameBtn" onclick="newGame()">NYTT SPEL</button>
+      </div>
+
+      <div class="panel">
+        <h3>Skriv in din gissning under &amp; klicka enter</h3>
+        <!-- viktigt att skriva number för annars kan spelaren skriva in bokstäver -->
+        <!-- eventhandler = onchange så varje gång siffran ändras
+      kommer en function som heter compareGuess starta
+    om vi har autocomplete off har vi inte the drop down när vi skriver in nummrena-->
+      <input type="number" id="inputBox" onchange="compareGuess()" autocomplete="off">
+      <!-- efterson vi ska använde js för att få fram siffran sätter vi
+    id på span och tarbort 0 -->
+      <p>Antal försök: <span id="attempts"><!--0--></span></p>
+      </div>
+      <div class="panel">
+        <p>Dina gissningar:</p>
+        <p id="guessLog"></p>
+      </div>
+
+    </div>
+
+      <script src="gn.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  font-size: 1.2em;
+  background: url('gn.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#container {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(121, 126, 205, 0.8);
+}
+
+.panel {
+  max-width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(238, 238, 238, 0.8);
+}
+
+button {
+  background: rgb(195, 214, 236);
+  height: 4em;
+  width: 80%;
+  margin-bottom: 1.5em;
+  border-radius: 10px;
+  font-size: 0.9em;
+  color: white;
+}
+
+input {
+  border-radius: 10px;
+  width: 80%;
+  height: 4em;
+  text-align: center;
+}
+
+.activeButton {
+  background: purple;
+}
